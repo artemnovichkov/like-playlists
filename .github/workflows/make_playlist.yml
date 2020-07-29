@@ -1,0 +1,29 @@
+name: Make playlist
+
+on:
+  schedule:
+    - cron: "0 2 1 * *"
+  push:
+    branches: [ master ]
+jobs:
+  create-playlist:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Run main script
+      run: |
+        pip install yandex-music --upgrade
+        python make_playlist.py
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Update url for playlist" -a
+      env:
+        LOGIN: ${{ secrets.LOGIN }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
