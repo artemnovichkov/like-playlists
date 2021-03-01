@@ -27,7 +27,7 @@ else:
   months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
   playlist = client.usersPlaylistsCreate("Лайки за {} {}".format(months[yesterday.month - 1], yesterday.year))
   for track in tracks:
-    playlist = client.usersPlaylistsInsertTrack(playlist.kind, track.track.id, track.track.albums[0].id, 0, playlist.revision)
+    playlist = client.usersPlaylistsInsertTrack(playlist.kind, track.id, track.album_id, 0, playlist.revision)
   # update url in README
   url = "https://music.yandex.com/users/{}/playlists/{}".format(playlist.owner.login, playlist.kind)
   with open ('README.md', 'r+' ) as f:
