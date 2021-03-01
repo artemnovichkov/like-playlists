@@ -15,8 +15,8 @@ jobs:
         python-version: '3.x'
     - name: Run main script
       run: |
-        pip install yandex-music --upgrade
-        python make_playlist.py
+        pip3 install yandex-music --upgrade
+        python3 make_playlist.py
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Update url for playlist" -a
