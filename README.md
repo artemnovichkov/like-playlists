@@ -3,7 +3,7 @@
 ![Status](https://github.com/artemnovichkov/like-playlists/workflows/Make%20playlist/badge.svg)
 
 <p align="center">
-  <a href="https://music.yandex.com/users/art3mnovichkov/playlists/1059">
+  <a href="https://music.yandex.com/users/art3mnovichkov/playlists/1060">
       <img src=".github/logo.png" width="480" max-width="90%" />
   </a>
 </p>
