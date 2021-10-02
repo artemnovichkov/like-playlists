@@ -24,7 +24,7 @@ Here is a simple script that creates a playlists with songs you liked in previou
 
 ## Author
 
-Artem Novichkov, novichkoff93@gmail.com
+Artem Novichkov, https://www.artemnovichkov.com/about
 
 ## License
 
